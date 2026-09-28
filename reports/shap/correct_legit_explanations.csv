@@ -1,0 +1,11 @@
+feature,mean_abs_shap
+Time Diff between first and last (Mins),1.37721
+Unique Received From Addresses,1.24961
+total ether received,1.19254
+avg val received,1.09162
+Avg min between received tnx,0.8097
+total transactions (including tnx to create contract,0.64197
+Avg min between sent tnx,0.6157
+total ether balance,0.58616
+Sent tnx,0.54505
+min val sent,0.52613

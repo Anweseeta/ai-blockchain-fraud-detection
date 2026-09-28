@@ -1,0 +1,6 @@
+{
+  "fraud_probability": 0.9996,
+  "anomaly_score": 0.1259,
+  "risk_score": 100,
+  "risk_level": "HIGH"
+}

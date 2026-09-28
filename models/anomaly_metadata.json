@@ -1,0 +1,63 @@
+{
+  "phase": 4,
+  "part": "A/B",
+  "created_utc": "2026-09-25T10:04:41.259000+00:00",
+  "seed": 42,
+  "why_isolation_forest": "Unsupervised; no FLAG used in fitting. Random-partition isolation suits mixed behavioral aggregates with no distributional assumptions, scales to 6889x52, and complements the supervised classifier by flagging records that are unusual regardless of whether they resemble known fraud.",
+  "training": "fitted on train split only (6889 rows, 52 scaled features); FLAG never used.",
+  "contamination_grid": [
+    {
+      "contamination": 0.05,
+      "val_f1_flag": 0.0342,
+      "val_pr_auc": 0.2
+    },
+    {
+      "contamination": 0.1,
+      "val_f1_flag": 0.0765,
+      "val_pr_auc": 0.2
+    },
+    {
+      "contamination": 0.15,
+      "val_f1_flag": 0.1034,
+      "val_pr_auc": 0.2
+    },
+    {
+      "contamination": 0.22,
+      "val_f1_flag": 0.1123,
+      "val_pr_auc": 0.2
+    },
+    {
+      "contamination": 0.3,
+      "val_f1_flag": 0.1379,
+      "val_pr_auc": 0.2
+    }
+  ],
+  "selected": {
+    "n_estimators": 200,
+    "max_samples": 0.5,
+    "contamination": 0.3,
+    "random_state": 42
+  },
+  "why_selected": "contamination chosen by max validation F1 of the induced flag; n_estimators/max_samples by validation PR-AUC. Contamination is an operating assumption about review capacity, NOT an estimate of fraud prevalence (fraud rate is 22.1%; blindly copying it would conflate anomaly with fraud).",
+  "score_normalization": "raw = -score_samples (higher = more anomalous); normalized = clip((raw - train_min)/(train_max - train_min)) using TRAIN min/max only; flag threshold = (1 - contamination) quantile of train raw scores.",
+  "operating_threshold_norm": 0.1585,
+  "test_metrics": {
+    "threshold": 0.1585,
+    "accuracy": 0.586,
+    "precision": 0.2137,
+    "recall": 0.3242,
+    "f1": 0.2576,
+    "roc_auc": 0.5447,
+    "pr_auc": 0.2214,
+    "tn": 759,
+    "fp": 390,
+    "fn": 221,
+    "tp": 106,
+    "support_0": 1149,
+    "support_1": 327
+  },
+  "spearman_anomaly_vs_xgb": {
+    "val": 0.085,
+    "test": 0.0718
+  }
+}

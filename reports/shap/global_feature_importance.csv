@@ -1,0 +1,53 @@
+rank,feature,mean_abs_shap,mean_shap
+1,Unique Received From Addresses,1.41064,-0.12878
+2,Time Diff between first and last (Mins),1.22315,-0.89206
+3,total ether received,1.10319,-0.62606
+4,avg val received,0.95471,-0.61516
+5,Avg min between received tnx,0.78078,-0.35539
+6, ERC20_most_rec_token_type_Blockwell say NOTSAFU,0.64726,-0.07059
+7,total ether balance,0.63758,-0.29081
+8,total transactions (including tnx to create contract,0.62502,-0.29387
+9,Avg min between sent tnx,0.57201,-0.25769
+10,min val sent,0.51856,-0.13382
+11,Sent tnx,0.51751,-0.23503
+12,min value received,0.49589,-0.2685
+13, ERC20 min val rec,0.39456,-0.10141
+14,total Ether sent,0.38918,-0.22472
+15,max value received ,0.36467,0.0074
+16,Received Tnx,0.32431,-0.19202
+17,avg val sent,0.26671,-0.19196
+18, ERC20 max val rec,0.25214,-0.00715
+19, ERC20_most_rec_token_type_infrequent_sklearn,0.24376,-0.0963
+20,max val sent,0.23485,-0.17982
+21,Unique Sent To Addresses,0.22798,-0.09247
+22, Total ERC20 tnxs,0.20904,-0.09772
+23, ERC20_most_rec_token_type_OmiseGO,0.14894,-0.0677
+24, ERC20 uniq rec contract addr,0.14385,-0.06549
+25,Number of Created Contracts,0.13764,-0.02588
+26, ERC20 avg val rec,0.08382,-0.01271
+27, ERC20 total Ether received,0.0761,-0.00472
+28, ERC20 uniq sent addr,0.07472,-0.01953
+29, ERC20 max val sent,0.05366,-0.01522
+30, ERC20 min val sent,0.04629,-0.00425
+31, ERC20 uniq sent token name,0.04383,-0.01234
+32, ERC20 uniq rec addr,0.04375,-0.01337
+33, ERC20 uniq rec token name,0.03363,-0.02067
+34, ERC20 total ether sent,0.03163,-0.01167
+35, ERC20_most_rec_token_type_none,0.02824,-0.00125
+36, ERC20 avg val sent,0.02395,-0.01364
+37, ERC20 most sent token type_infrequent_sklearn,0.01997,-0.00593
+38, ERC20_most_rec_token_type_Golem,0.01977,0.00189
+39, ERC20 most sent token type_blockwell.ai KYC Casper Token,0.01419,0.0007
+40, ERC20_most_rec_token_type_Livepeer Token,0.00933,-0.00112
+41, ERC20 most sent token type_Golem,0.00742,0.00147
+42, ERC20_most_rec_token_type_XENON,0.00426,-8e-05
+43, ERC20 most sent token type_none,0.00356,-6e-05
+44, ERC20 most sent token type_EOS,0.0013,-0.0002
+45, ERC20_most_rec_token_type_DATAcoin,0.00018,7e-05
+46,total ether sent contracts,0.0,0.0
+47, ERC20_most_rec_token_type_EOS,0.0,0.0
+48, ERC20 most sent token type_OmiseGO,0.0,0.0
+49,avg value sent to contract,0.0,0.0
+50,min value sent to contract,0.0,0.0
+51,max val sent to contract,0.0,0.0
+52, ERC20 total Ether sent contract,0.0,0.0

@@ -1,0 +1,161 @@
+{
+  "formula": "risk_score = 100 * (w_fraud * fraud_probability + w_anomaly * anomaly_score); both inputs in [0,1]; weights sum to 1",
+  "note": "Weights are a project-defined operating policy, NOT universal fraud standards.",
+  "weights": {
+    "fraud_probability": 1.0,
+    "anomaly_score": 0.0
+  },
+  "why_default_weights": "EVIDENCE-BACKED (revised after validation sensitivity analysis): the Isolation Forest anomaly score is near-orthogonal to fraud on these aggregate features (val PR-AUC 0.217 vs 0.2215 no-skill baseline; Spearman 0.07-0.09 with XGBoost probability; high-anomaly records are LESS likely fraud than average). On validation, every increase in anomaly weight monotonically degraded HIGH-bucket F1 (0.9321 at w_anomaly=0 down to 0.0651 at w_anomaly=0.5) and risk PR-AUC. Test confirms: XGB-only risk PR-AUC 0.9848 vs 0.9735 combined at (0.7, 0.3). The anomaly input stays plumbed in the formula for future representations (e.g. graph-based anomaly features); its operating weight is 0 until an anomaly signal that actually tracks fraud is found.",
+  "thresholds": {
+    "low_max": 30,
+    "medium_max": 70
+  },
+  "threshold_note": "0-30 LOW, 31-70 MEDIUM, 71-100 HIGH are operational project thresholds, NOT universal fraud standards.",
+  "levels": {
+    "LOW": [
+      0,
+      30
+    ],
+    "MEDIUM": [
+      31,
+      70
+    ],
+    "HIGH": [
+      71,
+      100
+    ]
+  },
+  "selected_weights": {
+    "fraud_probability": 0.7,
+    "anomaly_score": 0.3
+  },
+  "sensitivity_validation": [
+    {
+      "w_fraud": 1.0,
+      "w_anomaly": 0.0,
+      "val_pr_auc_risk": 0.9825,
+      "HIGH_precision": 0.9641,
+      "HIGH_recall": 0.9021,
+      "HIGH_f1": 0.9321,
+      "pct_HIGH": 0.2073
+    },
+    {
+      "w_fraud": 0.8,
+      "w_anomaly": 0.2,
+      "val_pr_auc_risk": 0.9638,
+      "HIGH_precision": 0.9761,
+      "HIGH_recall": 0.8746,
+      "HIGH_f1": 0.9226,
+      "pct_HIGH": 0.2012
+    },
+    {
+      "w_fraud": 0.7,
+      "w_anomaly": 0.3,
+      "val_pr_auc_risk": 0.9603,
+      "HIGH_precision": 0.9901,
+      "HIGH_recall": 0.6116,
+      "HIGH_f1": 0.7561,
+      "pct_HIGH": 0.1802
+    },
+    {
+      "w_fraud": 0.6,
+      "w_anomaly": 0.4,
+      "val_pr_auc_risk": 0.9557,
+      "HIGH_precision": 1.0,
+      "HIGH_recall": 0.0734,
+      "HIGH_f1": 0.1368,
+      "pct_HIGH": 0.0183
+    },
+    {
+      "w_fraud": 0.5,
+      "w_anomaly": 0.5,
+      "val_pr_auc_risk": 0.9501,
+      "HIGH_precision": 1.0,
+      "HIGH_recall": 0.0336,
+      "HIGH_f1": 0.0651,
+      "pct_HIGH": 0.0102
+    }
+  ],
+  "sensitivity_test_diagnostic": [
+    {
+      "w_fraud": 1.0,
+      "w_anomaly": 0.0,
+      "risk_pr_auc": 0.9848,
+      "HIGH_P": 0.9864,
+      "HIGH_R": 0.8899,
+      "HIGH_F1": 0.9357,
+      "FP": 4,
+      "FN": 36,
+      "pct_HIGH": 0.1999,
+      "fraud_rate_LOW": 0.019,
+      "fraud_rate_MED": 0.5833,
+      "fraud_rate_HIGH": 0.9864,
+      "pct_LOW": 0.7839,
+      "pct_MED": 0.0163
+    },
+    {
+      "w_fraud": 0.8,
+      "w_anomaly": 0.2,
+      "risk_pr_auc": 0.977,
+      "HIGH_P": 0.9964,
+      "HIGH_R": 0.8502,
+      "HIGH_F1": 0.9175,
+      "FP": 1,
+      "FN": 49,
+      "pct_HIGH": 0.189,
+      "fraud_rate_LOW": 0.0198,
+      "fraud_rate_MED": 0.7222,
+      "fraud_rate_HIGH": 0.9964,
+      "pct_LOW": 0.7866,
+      "pct_MED": 0.0244
+    },
+    {
+      "w_fraud": 0.7,
+      "w_anomaly": 0.3,
+      "risk_pr_auc": 0.9735,
+      "HIGH_P": 1.0,
+      "HIGH_R": 0.8073,
+      "HIGH_F1": 0.8934,
+      "FP": 0,
+      "FN": 63,
+      "pct_HIGH": 0.1789,
+      "fraud_rate_LOW": 0.0198,
+      "fraud_rate_MED": 0.7843,
+      "fraud_rate_HIGH": 1.0,
+      "pct_LOW": 0.7866,
+      "pct_MED": 0.0346
+    },
+    {
+      "w_fraud": 0.6,
+      "w_anomaly": 0.4,
+      "risk_pr_auc": 0.9702,
+      "HIGH_P": 1.0,
+      "HIGH_R": 0.0703,
+      "HIGH_F1": 0.1314,
+      "FP": 0,
+      "FN": 304,
+      "pct_HIGH": 0.0156,
+      "fraud_rate_LOW": 0.0224,
+      "fraud_rate_MED": 0.9456,
+      "fraud_rate_HIGH": 1.0,
+      "pct_LOW": 0.7852,
+      "pct_MED": 0.1992
+    },
+    {
+      "w_fraud": 0.5,
+      "w_anomaly": 0.5,
+      "risk_pr_auc": 0.9632,
+      "HIGH_P": 1.0,
+      "HIGH_R": 0.0275,
+      "HIGH_F1": 0.0536,
+      "FP": 0,
+      "FN": 318,
+      "pct_HIGH": 0.0061,
+      "fraud_rate_LOW": 0.0244,
+      "fraud_rate_MED": 0.9091,
+      "fraud_rate_HIGH": 1.0,
+      "pct_LOW": 0.7778,
+      "pct_MED": 0.2161
+    }
+  ]
+}

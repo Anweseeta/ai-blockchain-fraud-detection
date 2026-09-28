@@ -1,0 +1,16 @@
+feature,gain
+ ERC20_most_rec_token_type_Blockwell say NOTSAFU,81.75459289550781
+total ether received,31.20058822631836
+ ERC20 min val rec,16.13719367980957
+Unique Received From Addresses,15.15694522857666
+ ERC20_most_rec_token_type_OmiseGO,12.785439491271973
+ ERC20 most sent token type_Golem,11.129323959350586
+Time Diff between first and last (Mins),9.611123085021973
+avg val received,7.553449630737305
+ ERC20_most_rec_token_type_infrequent_sklearn,7.419871807098389
+ ERC20_most_rec_token_type_Golem,7.2737226486206055
+total transactions (including tnx to create contract,6.30149507522583
+Avg min between received tnx,6.1171088218688965
+ ERC20 uniq sent token name,5.2723188400268555
+Received Tnx,5.18158483505249
+ ERC20_most_rec_token_type_none,5.057929992675781

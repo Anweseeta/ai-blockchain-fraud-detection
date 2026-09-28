@@ -1,0 +1,497 @@
+{
+  "high_risk_correct_fraud": {
+    "test_row": 1160,
+    "FLAG": 1,
+    "fraud_probability": 1.0,
+    "risk_score": 100,
+    "risk_level": "HIGH",
+    "top_factors": [
+      {
+        "rank": 1,
+        "feature": "Unique Received From Addresses",
+        "transformed_value": 1.7248,
+        "raw_input_column": "Unique Received From Addresses",
+        "raw_value": "26",
+        "shap_value": 3.65245,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 2,
+        "feature": " ERC20_most_rec_token_type_Blockwell say NOTSAFU",
+        "transformed_value": 1.0,
+        "raw_input_column": " ERC20_most_rec_token_type",
+        "raw_value": "Blockwell say NOTSAFU",
+        "shap_value": 3.05115,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 3,
+        "feature": "total ether balance",
+        "transformed_value": -0.1862,
+        "raw_input_column": "total ether balance",
+        "raw_value": "0.0008609999999999",
+        "shap_value": 1.45939,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 4,
+        "feature": " ERC20 min val rec",
+        "transformed_value": 0.4119,
+        "raw_input_column": " ERC20 min val rec",
+        "raw_value": "1.337",
+        "shap_value": 1.20199,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 5,
+        "feature": "min val sent",
+        "transformed_value": 3.3509,
+        "raw_input_column": "min val sent",
+        "raw_value": "30.232895000000006",
+        "shap_value": 1.1416,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 6,
+        "feature": "Avg min between received tnx",
+        "transformed_value": -0.0449,
+        "raw_input_column": "Avg min between received tnx",
+        "raw_value": "118.22",
+        "shap_value": 0.94822,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 7,
+        "feature": "Time Diff between first and last (Mins)",
+        "transformed_value": -0.6147,
+        "raw_input_column": "Time Diff between first and last (Mins)",
+        "raw_value": "19382.85",
+        "shap_value": 0.80913,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 8,
+        "feature": " ERC20 max val rec",
+        "transformed_value": -0.3727,
+        "raw_input_column": " ERC20 max val rec",
+        "raw_value": "1.337",
+        "shap_value": 0.62003,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 9,
+        "feature": "avg val received",
+        "transformed_value": -0.5856,
+        "raw_input_column": "avg val received",
+        "raw_value": "1.042543",
+        "shap_value": 0.56783,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 10,
+        "feature": "Sent tnx",
+        "transformed_value": -0.5955,
+        "raw_input_column": "Sent tnx",
+        "raw_value": "1",
+        "shap_value": 0.52412,
+        "direction": "increases_risk"
+      }
+    ]
+  },
+  "medium_risk_correct_fraud": {
+    "test_row": 1416,
+    "FLAG": 1,
+    "fraud_probability": 0.5772,
+    "risk_score": 58,
+    "risk_level": "MEDIUM",
+    "top_factors": [
+      {
+        "rank": 1,
+        "feature": " ERC20 min val rec",
+        "transformed_value": 3.6244,
+        "raw_input_column": " ERC20 min val rec",
+        "raw_value": "99.0",
+        "shap_value": 1.46359,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 2,
+        "feature": "Unique Received From Addresses",
+        "transformed_value": -0.328,
+        "raw_input_column": "Unique Received From Addresses",
+        "raw_value": "2",
+        "shap_value": -1.27273,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 3,
+        "feature": "min val sent",
+        "transformed_value": -0.5773,
+        "raw_input_column": "min val sent",
+        "raw_value": "0.001",
+        "shap_value": -0.92777,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 4,
+        "feature": "total ether received",
+        "transformed_value": -1.0406,
+        "raw_input_column": "total ether received",
+        "raw_value": "1.343284",
+        "shap_value": 0.73095,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 5,
+        "feature": "Avg min between received tnx",
+        "transformed_value": 0.6465,
+        "raw_input_column": "Avg min between received tnx",
+        "raw_value": "2075.59",
+        "shap_value": -0.72133,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 6,
+        "feature": "Received Tnx",
+        "transformed_value": -0.1858,
+        "raw_input_column": "Received Tnx",
+        "raw_value": "6",
+        "shap_value": -0.698,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 7,
+        "feature": "min value received",
+        "transformed_value": -0.5894,
+        "raw_input_column": "min value received",
+        "raw_value": "0.00549",
+        "shap_value": -0.6549,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 8,
+        "feature": " ERC20_most_rec_token_type_infrequent_sklearn",
+        "transformed_value": 1.0,
+        "raw_input_column": " ERC20_most_rec_token_type",
+        "raw_value": "ERC20",
+        "shap_value": 0.64711,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 9,
+        "feature": "Sent tnx",
+        "transformed_value": 0.3552,
+        "raw_input_column": "Sent tnx",
+        "raw_value": "10",
+        "shap_value": -0.57147,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 10,
+        "feature": "Unique Sent To Addresses",
+        "transformed_value": 0.652,
+        "raw_input_column": "Unique Sent To Addresses",
+        "raw_value": "6",
+        "shap_value": 0.4955,
+        "direction": "increases_risk"
+      }
+    ]
+  },
+  "low_risk_correct_legit": {
+    "test_row": 498,
+    "FLAG": 0,
+    "fraud_probability": 0.0,
+    "risk_score": 0,
+    "risk_level": "LOW",
+    "top_factors": [
+      {
+        "rank": 1,
+        "feature": "Unique Received From Addresses",
+        "transformed_value": -0.7068,
+        "raw_input_column": "Unique Received From Addresses",
+        "raw_value": "1",
+        "shap_value": -2.24566,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 2,
+        "feature": "Avg min between received tnx",
+        "transformed_value": 1.183,
+        "raw_input_column": "Avg min between received tnx",
+        "raw_value": "19070.37",
+        "shap_value": -1.8045,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 3,
+        "feature": "Time Diff between first and last (Mins)",
+        "transformed_value": 0.9852,
+        "raw_input_column": "Time Diff between first and last (Mins)",
+        "raw_value": "534050.37",
+        "shap_value": -1.51159,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 4,
+        "feature": "total ether received",
+        "transformed_value": 0.3125,
+        "raw_input_column": "total ether received",
+        "raw_value": "64.35948599",
+        "shap_value": -1.2809,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 5,
+        "feature": "Avg min between sent tnx",
+        "transformed_value": -0.6058,
+        "raw_input_column": "Avg min between sent tnx",
+        "raw_value": "2.86",
+        "shap_value": -1.11992,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 6,
+        "feature": "Sent tnx",
+        "transformed_value": 0.8958,
+        "raw_input_column": "Sent tnx",
+        "raw_value": "28",
+        "shap_value": -0.96153,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 7,
+        "feature": "min val sent",
+        "transformed_value": -0.5747,
+        "raw_input_column": "min val sent",
+        "raw_value": "0.003298",
+        "shap_value": -0.86189,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 8,
+        "feature": "total transactions (including tnx to create contract",
+        "transformed_value": 0.6148,
+        "raw_input_column": "total transactions (including tnx to create contract",
+        "raw_value": "56",
+        "shap_value": -0.83965,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 9,
+        "feature": "Received Tnx",
+        "transformed_value": 0.5728,
+        "raw_input_column": "Received Tnx",
+        "raw_value": "28",
+        "shap_value": -0.80743,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 10,
+        "feature": "total Ether sent",
+        "transformed_value": 0.4863,
+        "raw_input_column": "total Ether sent",
+        "raw_value": "64.34772599",
+        "shap_value": -0.58911,
+        "direction": "decreases_risk"
+      }
+    ]
+  },
+  "high_risk_false_positive": {
+    "test_row": 1148,
+    "FLAG": 0,
+    "fraud_probability": 0.8111,
+    "risk_score": 81,
+    "risk_level": "HIGH",
+    "top_factors": [
+      {
+        "rank": 1,
+        "feature": "Unique Received From Addresses",
+        "transformed_value": 0.3196,
+        "raw_input_column": "Unique Received From Addresses",
+        "raw_value": "5",
+        "shap_value": 1.22184,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 2,
+        "feature": "min val sent",
+        "transformed_value": -0.5785,
+        "raw_input_column": "min val sent",
+        "raw_value": "0.0",
+        "shap_value": -0.7777,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 3,
+        "feature": "Sent tnx",
+        "transformed_value": 0.5282,
+        "raw_input_column": "Sent tnx",
+        "raw_value": "14",
+        "shap_value": -0.68843,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 4,
+        "feature": "Time Diff between first and last (Mins)",
+        "transformed_value": -0.5729,
+        "raw_input_column": "Time Diff between first and last (Mins)",
+        "raw_value": "32811.37",
+        "shap_value": 0.66376,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 5,
+        "feature": " ERC20 max val rec",
+        "transformed_value": 1.3512,
+        "raw_input_column": " ERC20 max val rec",
+        "raw_value": "3046.0",
+        "shap_value": 0.61835,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 6,
+        "feature": "avg val received",
+        "transformed_value": -0.667,
+        "raw_input_column": "avg val received",
+        "raw_value": "0.754152",
+        "shap_value": 0.53807,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 7,
+        "feature": " ERC20_most_rec_token_type_infrequent_sklearn",
+        "transformed_value": 1.0,
+        "raw_input_column": " ERC20_most_rec_token_type",
+        "raw_value": "BAT",
+        "shap_value": 0.53274,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 8,
+        "feature": " ERC20 min val sent",
+        "transformed_value": 5.6873,
+        "raw_input_column": " ERC20 min val sent",
+        "raw_value": "1520.0",
+        "shap_value": -0.46738,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 9,
+        "feature": " ERC20 min val rec",
+        "transformed_value": 0.2788,
+        "raw_input_column": " ERC20 min val rec",
+        "raw_value": "1.0",
+        "shap_value": 0.41168,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 10,
+        "feature": "total ether received",
+        "transformed_value": -0.6919,
+        "raw_input_column": "total ether received",
+        "raw_value": "4.52491194",
+        "shap_value": 0.39722,
+        "direction": "increases_risk"
+      }
+    ]
+  },
+  "false_negative": {
+    "test_row": 1414,
+    "FLAG": 1,
+    "fraud_probability": 0.5114,
+    "risk_score": 51,
+    "risk_level": "MEDIUM",
+    "top_factors": [
+      {
+        "rank": 1,
+        "feature": "Unique Received From Addresses",
+        "transformed_value": 0.3196,
+        "raw_input_column": "Unique Received From Addresses",
+        "raw_value": "5",
+        "shap_value": 2.00605,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 2,
+        "feature": "min val sent",
+        "transformed_value": -0.5767,
+        "raw_input_column": "min val sent",
+        "raw_value": "0.0016",
+        "shap_value": -1.12579,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 3,
+        "feature": "Avg min between sent tnx",
+        "transformed_value": 0.2452,
+        "raw_input_column": "Avg min between sent tnx",
+        "raw_value": "81.29",
+        "shap_value": -1.05928,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 4,
+        "feature": "Time Diff between first and last (Mins)",
+        "transformed_value": -0.6657,
+        "raw_input_column": "Time Diff between first and last (Mins)",
+        "raw_value": "2965.73",
+        "shap_value": 1.0099,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 5,
+        "feature": "Sent tnx",
+        "transformed_value": -0.2089,
+        "raw_input_column": "Sent tnx",
+        "raw_value": "3",
+        "shap_value": -0.81892,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 6,
+        "feature": "total ether balance",
+        "transformed_value": -0.1849,
+        "raw_input_column": "total ether balance",
+        "raw_value": "0.003675",
+        "shap_value": -0.71932,
+        "direction": "decreases_risk"
+      },
+      {
+        "rank": 7,
+        "feature": "avg val received",
+        "transformed_value": -0.6517,
+        "raw_input_column": "avg val received",
+        "raw_value": "0.805055",
+        "shap_value": 0.68855,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 8,
+        "feature": "Avg min between received tnx",
+        "transformed_value": 0.323,
+        "raw_input_column": "Avg min between received tnx",
+        "raw_value": "544.37",
+        "shap_value": 0.64744,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 9,
+        "feature": "total ether received",
+        "transformed_value": -0.7304,
+        "raw_input_column": "total ether received",
+        "raw_value": "4.025275",
+        "shap_value": 0.57966,
+        "direction": "increases_risk"
+      },
+      {
+        "rank": 10,
+        "feature": "total transactions (including tnx to create contract",
+        "transformed_value": -0.337,
+        "raw_input_column": "total transactions (including tnx to create contract",
+        "raw_value": "8",
+        "shap_value": 0.57159,
+        "direction": "increases_risk"
+      }
+    ]
+  }
+}

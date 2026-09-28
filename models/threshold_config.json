@@ -1,0 +1,23 @@
+{
+  "logistic_regression": {
+    "threshold": 0.7,
+    "criterion": "argmax F1 on validation",
+    "val_precision": 0.8575757575757575,
+    "val_recall": 0.8654434250764526,
+    "val_f1": 0.8614916286149162
+  },
+  "random_forest": {
+    "threshold": 0.5,
+    "criterion": "argmax F1 on validation",
+    "val_precision": 0.9131736526946108,
+    "val_recall": 0.9327217125382263,
+    "val_f1": 0.9228441754916793
+  },
+  "xgboost": {
+    "threshold": 0.55,
+    "criterion": "argmax F1 on validation",
+    "val_precision": 0.949685534591195,
+    "val_recall": 0.9235474006116208,
+    "val_f1": 0.9364341085271318
+  }
+}

@@ -1,0 +1,16 @@
+feature,importance
+Time Diff between first and last (Mins),0.0989569832455722
+avg val received,0.09050306792605685
+total ether received,0.07301920547851437
+Avg min between received tnx,0.06318849211457057
+Unique Received From Addresses,0.057340440752946954
+max value received ,0.055733931429525777
+ ERC20_most_rec_token_type_Blockwell say NOTSAFU,0.051126449789631934
+total Ether sent,0.0503399444400033
+total ether balance,0.04807170284895266
+total transactions (including tnx to create contract,0.04445135439393111
+min value received,0.03431295872553102
+ ERC20 min val rec,0.033343970800526306
+Sent tnx,0.031957882406576904
+Avg min between sent tnx,0.027416395273460792
+Received Tnx,0.026979943760040762

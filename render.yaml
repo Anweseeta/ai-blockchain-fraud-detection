@@ -1,0 +1,26 @@
+# Render blueprint for the fraud-risk FastAPI backend.
+# Deploy via the Render dashboard: New -> Blueprint -> connect this repo.
+# Then set the secret/URL env vars below in the dashboard (never commit values).
+services:
+  - type: web
+    name: fraud-risk-api
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r backend/requirements.txt"
+    # $PORT is supplied by Render; never hard-code a port.
+    startCommand: "uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT"
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.4
+      - key: MODEL_VERSION
+        value: 1.0.0
+      - key: RISK_CONFIG_VERSION
+        value: 1.0.0
+      - key: MONGO_DB
+        value: fraud_detection
+      - key: MONGO_COLLECTION
+        value: predictions
+      # Set in the Render dashboard after creating resources:
+      #   MONGO_URI      -> MongoDB Atlas connection string (secret)
+      #   CORS_ORIGINS   -> https://<your-vercel-app>.vercel.app

@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Data & models (raw data is user-supplied; never commit secrets)
+data/raw/*.csv
+data/raw/*.zip
+*.pkl
+*.joblib
+models/*.pkl
+models/*.joblib
+# EXCEPTION: the validated production artifacts MUST be committed —
+# Render loads them at startup. Only these two are required by the API.
+!models/preprocessor.joblib
+!models/xgboost.joblib
+
+# Env & secrets
+.env
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store

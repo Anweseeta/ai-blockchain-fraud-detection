@@ -1,0 +1,38 @@
+{
+  "median_activity_span_mins": {
+    "0": 119908.28,
+    "1": 6661.08
+  },
+  "median_sent_tnx": {
+    "0": 3.0,
+    "1": 1.0
+  },
+  "median_received_tnx": {
+    "0": 5.0,
+    "1": 3.0
+  },
+  "frac_created_contract": {
+    "0": 0.15771812080536912,
+    "1": 0.0859016393442623
+  },
+  "frac_erc20_active": {
+    "0": 0.4267337807606264,
+    "1": 0.6236065573770492
+  },
+  "median_total_eth_sent": {
+    "0": 33.044170519999994,
+    "1": 0.989139
+  },
+  "median_total_eth_received": {
+    "0": 71.412874045,
+    "1": 1.630359
+  },
+  "median_unique_sent_to": {
+    "0": 2.0,
+    "1": 1.0
+  },
+  "median_avg_min_between_sent": {
+    "0": 22.29,
+    "1": 0.0
+  }
+}

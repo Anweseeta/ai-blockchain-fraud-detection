@@ -1,0 +1,51 @@
+example,test_row,FLAG,fraud_probability,risk_score,risk_level,rank,feature,transformed_value,raw_input_column,raw_value,shap_value,direction
+high_risk_correct_fraud,1160,1,1.0,100,HIGH,1,Unique Received From Addresses,1.7248,Unique Received From Addresses,26,3.65245,increases_risk
+high_risk_correct_fraud,1160,1,1.0,100,HIGH,2, ERC20_most_rec_token_type_Blockwell say NOTSAFU,1.0, ERC20_most_rec_token_type,Blockwell say NOTSAFU,3.05115,increases_risk
+high_risk_correct_fraud,1160,1,1.0,100,HIGH,3,total ether balance,-0.1862,total ether balance,0.0008609999999999,1.45939,increases_risk
+high_risk_correct_fraud,1160,1,1.0,100,HIGH,4, ERC20 min val rec,0.4119, ERC20 min val rec,1.337,1.20199,increases_risk
+high_risk_correct_fraud,1160,1,1.0,100,HIGH,5,min val sent,3.3509,min val sent,30.232895000000006,1.1416,increases_risk
+high_risk_correct_fraud,1160,1,1.0,100,HIGH,6,Avg min between received tnx,-0.0449,Avg min between received tnx,118.22,0.94822,increases_risk
+high_risk_correct_fraud,1160,1,1.0,100,HIGH,7,Time Diff between first and last (Mins),-0.6147,Time Diff between first and last (Mins),19382.85,0.80913,increases_risk
+high_risk_correct_fraud,1160,1,1.0,100,HIGH,8, ERC20 max val rec,-0.3727, ERC20 max val rec,1.337,0.62003,increases_risk
+high_risk_correct_fraud,1160,1,1.0,100,HIGH,9,avg val received,-0.5856,avg val received,1.042543,0.56783,increases_risk
+high_risk_correct_fraud,1160,1,1.0,100,HIGH,10,Sent tnx,-0.5955,Sent tnx,1,0.52412,increases_risk
+medium_risk_correct_fraud,1416,1,0.5772,58,MEDIUM,1, ERC20 min val rec,3.6244, ERC20 min val rec,99.0,1.46359,increases_risk
+medium_risk_correct_fraud,1416,1,0.5772,58,MEDIUM,2,Unique Received From Addresses,-0.328,Unique Received From Addresses,2,-1.27273,decreases_risk
+medium_risk_correct_fraud,1416,1,0.5772,58,MEDIUM,3,min val sent,-0.5773,min val sent,0.001,-0.92777,decreases_risk
+medium_risk_correct_fraud,1416,1,0.5772,58,MEDIUM,4,total ether received,-1.0406,total ether received,1.343284,0.73095,increases_risk
+medium_risk_correct_fraud,1416,1,0.5772,58,MEDIUM,5,Avg min between received tnx,0.6465,Avg min between received tnx,2075.59,-0.72133,decreases_risk
+medium_risk_correct_fraud,1416,1,0.5772,58,MEDIUM,6,Received Tnx,-0.1858,Received Tnx,6,-0.698,decreases_risk
+medium_risk_correct_fraud,1416,1,0.5772,58,MEDIUM,7,min value received,-0.5894,min value received,0.00549,-0.6549,decreases_risk
+medium_risk_correct_fraud,1416,1,0.5772,58,MEDIUM,8, ERC20_most_rec_token_type_infrequent_sklearn,1.0, ERC20_most_rec_token_type,ERC20,0.64711,increases_risk
+medium_risk_correct_fraud,1416,1,0.5772,58,MEDIUM,9,Sent tnx,0.3552,Sent tnx,10,-0.57147,decreases_risk
+medium_risk_correct_fraud,1416,1,0.5772,58,MEDIUM,10,Unique Sent To Addresses,0.652,Unique Sent To Addresses,6,0.4955,increases_risk
+low_risk_correct_legit,498,0,0.0,0,LOW,1,Unique Received From Addresses,-0.7068,Unique Received From Addresses,1,-2.24566,decreases_risk
+low_risk_correct_legit,498,0,0.0,0,LOW,2,Avg min between received tnx,1.183,Avg min between received tnx,19070.37,-1.8045,decreases_risk
+low_risk_correct_legit,498,0,0.0,0,LOW,3,Time Diff between first and last (Mins),0.9852,Time Diff between first and last (Mins),534050.37,-1.51159,decreases_risk
+low_risk_correct_legit,498,0,0.0,0,LOW,4,total ether received,0.3125,total ether received,64.35948599,-1.2809,decreases_risk
+low_risk_correct_legit,498,0,0.0,0,LOW,5,Avg min between sent tnx,-0.6058,Avg min between sent tnx,2.86,-1.11992,decreases_risk
+low_risk_correct_legit,498,0,0.0,0,LOW,6,Sent tnx,0.8958,Sent tnx,28,-0.96153,decreases_risk
+low_risk_correct_legit,498,0,0.0,0,LOW,7,min val sent,-0.5747,min val sent,0.003298,-0.86189,decreases_risk
+low_risk_correct_legit,498,0,0.0,0,LOW,8,total transactions (including tnx to create contract,0.6148,total transactions (including tnx to create contract,56,-0.83965,decreases_risk
+low_risk_correct_legit,498,0,0.0,0,LOW,9,Received Tnx,0.5728,Received Tnx,28,-0.80743,decreases_risk
+low_risk_correct_legit,498,0,0.0,0,LOW,10,total Ether sent,0.4863,total Ether sent,64.34772599,-0.58911,decreases_risk
+high_risk_false_positive,1148,0,0.8111,81,HIGH,1,Unique Received From Addresses,0.3196,Unique Received From Addresses,5,1.22184,increases_risk
+high_risk_false_positive,1148,0,0.8111,81,HIGH,2,min val sent,-0.5785,min val sent,0.0,-0.7777,decreases_risk
+high_risk_false_positive,1148,0,0.8111,81,HIGH,3,Sent tnx,0.5282,Sent tnx,14,-0.68843,decreases_risk
+high_risk_false_positive,1148,0,0.8111,81,HIGH,4,Time Diff between first and last (Mins),-0.5729,Time Diff between first and last (Mins),32811.37,0.66376,increases_risk
+high_risk_false_positive,1148,0,0.8111,81,HIGH,5, ERC20 max val rec,1.3512, ERC20 max val rec,3046.0,0.61835,increases_risk
+high_risk_false_positive,1148,0,0.8111,81,HIGH,6,avg val received,-0.667,avg val received,0.754152,0.53807,increases_risk
+high_risk_false_positive,1148,0,0.8111,81,HIGH,7, ERC20_most_rec_token_type_infrequent_sklearn,1.0, ERC20_most_rec_token_type,BAT,0.53274,increases_risk
+high_risk_false_positive,1148,0,0.8111,81,HIGH,8, ERC20 min val sent,5.6873, ERC20 min val sent,1520.0,-0.46738,decreases_risk
+high_risk_false_positive,1148,0,0.8111,81,HIGH,9, ERC20 min val rec,0.2788, ERC20 min val rec,1.0,0.41168,increases_risk
+high_risk_false_positive,1148,0,0.8111,81,HIGH,10,total ether received,-0.6919,total ether received,4.52491194,0.39722,increases_risk
+false_negative,1414,1,0.5114,51,MEDIUM,1,Unique Received From Addresses,0.3196,Unique Received From Addresses,5,2.00605,increases_risk
+false_negative,1414,1,0.5114,51,MEDIUM,2,min val sent,-0.5767,min val sent,0.0016,-1.12579,decreases_risk
+false_negative,1414,1,0.5114,51,MEDIUM,3,Avg min between sent tnx,0.2452,Avg min between sent tnx,81.29,-1.05928,decreases_risk
+false_negative,1414,1,0.5114,51,MEDIUM,4,Time Diff between first and last (Mins),-0.6657,Time Diff between first and last (Mins),2965.73,1.0099,increases_risk
+false_negative,1414,1,0.5114,51,MEDIUM,5,Sent tnx,-0.2089,Sent tnx,3,-0.81892,decreases_risk
+false_negative,1414,1,0.5114,51,MEDIUM,6,total ether balance,-0.1849,total ether balance,0.003675,-0.71932,decreases_risk
+false_negative,1414,1,0.5114,51,MEDIUM,7,avg val received,-0.6517,avg val received,0.805055,0.68855,increases_risk
+false_negative,1414,1,0.5114,51,MEDIUM,8,Avg min between received tnx,0.323,Avg min between received tnx,544.37,0.64744,increases_risk
+false_negative,1414,1,0.5114,51,MEDIUM,9,total ether received,-0.7304,total ether received,4.025275,0.57966,increases_risk
+false_negative,1414,1,0.5114,51,MEDIUM,10,total transactions (including tnx to create contract,-0.337,total transactions (including tnx to create contract,8,0.57159,increases_risk
